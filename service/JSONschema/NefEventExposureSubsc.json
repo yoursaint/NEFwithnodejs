@@ -1,0 +1,2907 @@
+{
+    "type": "object",
+    "properties": {
+      "eventsSubs": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string"
+              },
+              "eventFilter": {
+                "type": "object",
+                "properties": {
+                  "tgtUe": {
+                    "type": "object",
+                    "properties": {
+                      "supis": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "interGroupIds": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "anyUeId": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "supis",
+                      "interGroupIds",
+                      "anyUeId"
+                    ]
+                  },
+                  "appIds": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "string"
+                      }
+                    ]
+                  },
+                  "locArea": {
+                    "type": "object",
+                    "properties": {
+                      "ecgis": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "eutraCellId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "eutraCellId",
+                              "nid"
+                            ]
+                          }
+                        ]
+                      },
+                      "ncgis": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "nrCellId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "nrCellId",
+                              "nid"
+                            ]
+                          }
+                        ]
+                      },
+                      "gRanNodeIds": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          },
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "gNbId": {
+                                "type": "object",
+                                "properties": {
+                                  "bitLength": {
+                                    "type": "integer"
+                                  },
+                                  "gNBValue": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "bitLength",
+                                  "gNBValue"
+                                ]
+                              },
+                              "ngeNbId": {
+                                "type": "string"
+                              },
+                              "wagfId": {
+                                "type": "string"
+                              },
+                              "tngfId": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              },
+                              "eNbId": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "n3IwfId",
+                              "gNbId",
+                              "ngeNbId",
+                              "wagfId",
+                              "tngfId",
+                              "nid",
+                              "eNbId"
+                            ]
+                          }
+                        ]
+                      },
+                      "tais": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "plmnId": {
+                                "type": "object",
+                                "properties": {
+                                  "mcc": {
+                                    "type": "string"
+                                  },
+                                  "mnc": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "mcc",
+                                  "mnc"
+                                ]
+                              },
+                              "tac": {
+                                "type": "string"
+                              },
+                              "nid": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "plmnId",
+                              "tac",
+                              "nid"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "ecgis",
+                      "ncgis",
+                      "gRanNodeIds",
+                      "tais"
+                    ]
+                  }
+                },
+                "required": [
+                  "tgtUe",
+                  "appIds",
+                  "locArea"
+                ]
+              }
+            },
+            "required": [
+              "event",
+              "eventFilter"
+            ]
+          }
+        ]
+      },
+      "eventsRepInfo": {
+        "type": "object",
+        "properties": {
+          "immRep": {
+            "type": "boolean"
+          },
+          "notifMethod": {
+            "type": "string"
+          },
+          "maxReportNbr": {
+            "type": "integer"
+          },
+          "monDur": {
+            "type": "string"
+          },
+          "repPeriod": {
+            "type": "integer"
+          },
+          "sampRatio": {
+            "type": "integer"
+          },
+          "partitionCriteria": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "grpRepTime": {
+            "type": "integer"
+          },
+          "notifFlag": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "immRep",
+          "notifMethod",
+          "maxReportNbr",
+          "monDur",
+          "repPeriod",
+          "sampRatio",
+          "partitionCriteria",
+          "grpRepTime",
+          "notifFlag"
+        ]
+      },
+      "notifUri": {
+        "type": "string"
+      },
+      "notifId": {
+        "type": "string"
+      },
+      "eventNotifs": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string"
+              },
+              "timeStamp": {
+                "type": "string"
+              },
+              "svcExprcInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "appId": {
+                        "type": "string"
+                      },
+                      "supis": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "svcExpPerFlows": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "svcExprc": {
+                                "type": "object",
+                                "properties": {
+                                  "mos": {
+                                    "type": "integer"
+                                  },
+                                  "upperRange": {
+                                    "type": "integer"
+                                  },
+                                  "lowerRange": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "mos",
+                                  "upperRange",
+                                  "lowerRange"
+                                ]
+                              },
+                              "timeIntev": {
+                                "type": "object",
+                                "properties": {
+                                  "startTime": {
+                                    "type": "string"
+                                  },
+                                  "stopTime": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "startTime",
+                                  "stopTime"
+                                ]
+                              },
+                              "dnai": {
+                                "type": "string"
+                              },
+                              "ipTrafficFilter": {
+                                "type": "object",
+                                "properties": {
+                                  "flowId": {
+                                    "type": "integer"
+                                  },
+                                  "flowDescriptions": {
+                                    "type": "array",
+                                    "items": [
+                                      {
+                                        "type": "string"
+                                      }
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "flowId",
+                                  "flowDescriptions"
+                                ]
+                              },
+                              "ethTrafficFilter": {
+                                "type": "object",
+                                "properties": {
+                                  "destMacAddr": {
+                                    "type": "string"
+                                  },
+                                  "ethType": {
+                                    "type": "string"
+                                  },
+                                  "fDesc": {
+                                    "type": "string"
+                                  },
+                                  "fDir": {
+                                    "type": "string"
+                                  },
+                                  "sourceMacAddr": {
+                                    "type": "string"
+                                  },
+                                  "vlanTags": {
+                                    "type": "array",
+                                    "items": [
+                                      {
+                                        "type": "string"
+                                      }
+                                    ]
+                                  },
+                                  "srcMacAddrEnd": {
+                                    "type": "string"
+                                  },
+                                  "destMacAddrEnd": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "destMacAddr",
+                                  "ethType",
+                                  "fDesc",
+                                  "fDir",
+                                  "sourceMacAddr",
+                                  "vlanTags",
+                                  "srcMacAddrEnd",
+                                  "destMacAddrEnd"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "svcExprc",
+                              "timeIntev",
+                              "dnai",
+                              "ipTrafficFilter",
+                              "ethTrafficFilter"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "appId",
+                      "supis",
+                      "svcExpPerFlows"
+                    ]
+                  }
+                ]
+              },
+              "ueMobilityInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "supi": {
+                        "type": "string"
+                      },
+                      "appId": {
+                        "type": "string"
+                      },
+                      "ueTrajs": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "ts": {
+                                "type": "string"
+                              },
+                              "location": {
+                                "type": "object",
+                                "properties": {
+                                  "eutraLocation": {
+                                    "type": "object",
+                                    "properties": {
+                                      "tai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "tac": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "tac",
+                                          "nid"
+                                        ]
+                                      },
+                                      "ignoreTai": {
+                                        "type": "boolean"
+                                      },
+                                      "ecgi": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "eutraCellId": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "eutraCellId",
+                                          "nid"
+                                        ]
+                                      },
+                                      "ignoreEcgi": {
+                                        "type": "boolean"
+                                      },
+                                      "ageOfLocationInformation": {
+                                        "type": "integer"
+                                      },
+                                      "ueLocationTimestamp": {
+                                        "type": "string"
+                                      },
+                                      "geographicalInformation": {
+                                        "type": "string"
+                                      },
+                                      "geodeticInformation": {
+                                        "type": "string"
+                                      },
+                                      "globalNgenbId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "n3IwfId": {
+                                            "type": "string"
+                                          },
+                                          "gNbId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "bitLength": {
+                                                "type": "integer"
+                                              },
+                                              "gNBValue": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "bitLength",
+                                              "gNBValue"
+                                            ]
+                                          },
+                                          "ngeNbId": {
+                                            "type": "string"
+                                          },
+                                          "wagfId": {
+                                            "type": "string"
+                                          },
+                                          "tngfId": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          },
+                                          "eNbId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "n3IwfId",
+                                          "gNbId",
+                                          "ngeNbId",
+                                          "wagfId",
+                                          "tngfId",
+                                          "nid",
+                                          "eNbId"
+                                        ]
+                                      },
+                                      "globalENbId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "n3IwfId": {
+                                            "type": "string"
+                                          },
+                                          "gNbId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "bitLength": {
+                                                "type": "integer"
+                                              },
+                                              "gNBValue": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "bitLength",
+                                              "gNBValue"
+                                            ]
+                                          },
+                                          "ngeNbId": {
+                                            "type": "string"
+                                          },
+                                          "wagfId": {
+                                            "type": "string"
+                                          },
+                                          "tngfId": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          },
+                                          "eNbId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "n3IwfId",
+                                          "gNbId",
+                                          "ngeNbId",
+                                          "wagfId",
+                                          "tngfId",
+                                          "nid",
+                                          "eNbId"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "tai",
+                                      "ignoreTai",
+                                      "ecgi",
+                                      "ignoreEcgi",
+                                      "ageOfLocationInformation",
+                                      "ueLocationTimestamp",
+                                      "geographicalInformation",
+                                      "geodeticInformation",
+                                      "globalNgenbId",
+                                      "globalENbId"
+                                    ]
+                                  },
+                                  "nrLocation": {
+                                    "type": "object",
+                                    "properties": {
+                                      "tai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "tac": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "tac",
+                                          "nid"
+                                        ]
+                                      },
+                                      "ncgi": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "nrCellId": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "nrCellId",
+                                          "nid"
+                                        ]
+                                      },
+                                      "ageOfLocationInformation": {
+                                        "type": "integer"
+                                      },
+                                      "ueLocationTimestamp": {
+                                        "type": "string"
+                                      },
+                                      "geographicalInformation": {
+                                        "type": "string"
+                                      },
+                                      "geodeticInformation": {
+                                        "type": "string"
+                                      },
+                                      "globalGnbId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "n3IwfId": {
+                                            "type": "string"
+                                          },
+                                          "gNbId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "bitLength": {
+                                                "type": "integer"
+                                              },
+                                              "gNBValue": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "bitLength",
+                                              "gNBValue"
+                                            ]
+                                          },
+                                          "ngeNbId": {
+                                            "type": "string"
+                                          },
+                                          "wagfId": {
+                                            "type": "string"
+                                          },
+                                          "tngfId": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          },
+                                          "eNbId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "n3IwfId",
+                                          "gNbId",
+                                          "ngeNbId",
+                                          "wagfId",
+                                          "tngfId",
+                                          "nid",
+                                          "eNbId"
+                                        ]
+                                      }
+                                    },
+                                    "required": [
+                                      "tai",
+                                      "ncgi",
+                                      "ageOfLocationInformation",
+                                      "ueLocationTimestamp",
+                                      "geographicalInformation",
+                                      "geodeticInformation",
+                                      "globalGnbId"
+                                    ]
+                                  },
+                                  "n3gaLocation": {
+                                    "type": "object",
+                                    "properties": {
+                                      "n3gppTai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "tac": {
+                                            "type": "string"
+                                          },
+                                          "nid": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "tac",
+                                          "nid"
+                                        ]
+                                      },
+                                      "n3IwfId": {
+                                        "type": "string"
+                                      },
+                                      "ueIpv4Addr": {
+                                        "type": "string"
+                                      },
+                                      "ueIpv6Addr": {
+                                        "type": "string"
+                                      },
+                                      "portNumber": {
+                                        "type": "integer"
+                                      },
+                                      "protocol": {
+                                        "type": "string"
+                                      },
+                                      "tnapId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "ssId": {
+                                            "type": "string"
+                                          },
+                                          "bssId": {
+                                            "type": "string"
+                                          },
+                                          "civicAddress": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "ssId",
+                                          "bssId",
+                                          "civicAddress"
+                                        ]
+                                      },
+                                      "twapId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "ssId": {
+                                            "type": "string"
+                                          },
+                                          "bssId": {
+                                            "type": "string"
+                                          },
+                                          "civicAddress": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "ssId",
+                                          "bssId",
+                                          "civicAddress"
+                                        ]
+                                      },
+                                      "hfcNodeId": {
+                                        "type": "object",
+                                        "properties": {
+                                          "hfcNId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "hfcNId"
+                                        ]
+                                      },
+                                      "gli": {
+                                        "type": "string"
+                                      },
+                                      "w5gbanLineType": {
+                                        "type": "string"
+                                      },
+                                      "gci": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "n3gppTai",
+                                      "n3IwfId",
+                                      "ueIpv4Addr",
+                                      "ueIpv6Addr",
+                                      "portNumber",
+                                      "protocol",
+                                      "tnapId",
+                                      "twapId",
+                                      "hfcNodeId",
+                                      "gli",
+                                      "w5gbanLineType",
+                                      "gci"
+                                    ]
+                                  },
+                                  "utraLocation": {
+                                    "type": "object",
+                                    "properties": {
+                                      "cgi": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "cellId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "cellId"
+                                        ]
+                                      },
+                                      "sai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "sac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "sac"
+                                        ]
+                                      },
+                                      "lai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac"
+                                        ]
+                                      },
+                                      "rai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "rac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "rac"
+                                        ]
+                                      },
+                                      "ageOfLocationInformation": {
+                                        "type": "integer"
+                                      },
+                                      "ueLocationTimestamp": {
+                                        "type": "string"
+                                      },
+                                      "geographicalInformation": {
+                                        "type": "string"
+                                      },
+                                      "geodeticInformation": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "cgi",
+                                      "sai",
+                                      "lai",
+                                      "rai",
+                                      "ageOfLocationInformation",
+                                      "ueLocationTimestamp",
+                                      "geographicalInformation",
+                                      "geodeticInformation"
+                                    ]
+                                  },
+                                  "geraLocation": {
+                                    "type": "object",
+                                    "properties": {
+                                      "locationNumber": {
+                                        "type": "string"
+                                      },
+                                      "cgi": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "cellId": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "cellId"
+                                        ]
+                                      },
+                                      "rai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "rac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "rac"
+                                        ]
+                                      },
+                                      "sai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          },
+                                          "sac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac",
+                                          "sac"
+                                        ]
+                                      },
+                                      "lai": {
+                                        "type": "object",
+                                        "properties": {
+                                          "plmnId": {
+                                            "type": "object",
+                                            "properties": {
+                                              "mcc": {
+                                                "type": "string"
+                                              },
+                                              "mnc": {
+                                                "type": "string"
+                                              }
+                                            },
+                                            "required": [
+                                              "mcc",
+                                              "mnc"
+                                            ]
+                                          },
+                                          "lac": {
+                                            "type": "string"
+                                          }
+                                        },
+                                        "required": [
+                                          "plmnId",
+                                          "lac"
+                                        ]
+                                      },
+                                      "vlrNumber": {
+                                        "type": "string"
+                                      },
+                                      "mscNumber": {
+                                        "type": "string"
+                                      },
+                                      "ageOfLocationInformation": {
+                                        "type": "integer"
+                                      },
+                                      "ueLocationTimestamp": {
+                                        "type": "string"
+                                      },
+                                      "geographicalInformation": {
+                                        "type": "string"
+                                      },
+                                      "geodeticInformation": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "locationNumber",
+                                      "cgi",
+                                      "rai",
+                                      "sai",
+                                      "lai",
+                                      "vlrNumber",
+                                      "mscNumber",
+                                      "ageOfLocationInformation",
+                                      "ueLocationTimestamp",
+                                      "geographicalInformation",
+                                      "geodeticInformation"
+                                    ]
+                                  }
+                                },
+                                "required": [
+                                  "eutraLocation",
+                                  "nrLocation",
+                                  "n3gaLocation",
+                                  "utraLocation",
+                                  "geraLocation"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "ts",
+                              "location"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "supi",
+                      "appId",
+                      "ueTrajs"
+                    ]
+                  }
+                ]
+              },
+              "ueCommInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "supi": {
+                        "type": "string"
+                      },
+                      "interGroupId": {
+                        "type": "string"
+                      },
+                      "appId": {
+                        "type": "string"
+                      },
+                      "comms": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "startTime": {
+                                "type": "string"
+                              },
+                              "endTime": {
+                                "type": "string"
+                              },
+                              "ulVol": {
+                                "type": "integer"
+                              },
+                              "dlVol": {
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "startTime",
+                              "endTime",
+                              "ulVol",
+                              "dlVol"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "supi",
+                      "interGroupId",
+                      "appId",
+                      "comms"
+                    ]
+                  }
+                ]
+              },
+              "excepInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "ipTrafficFilter": {
+                        "type": "object",
+                        "properties": {
+                          "flowId": {
+                            "type": "integer"
+                          },
+                          "flowDescriptions": {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "flowId",
+                          "flowDescriptions"
+                        ]
+                      },
+                      "ethTrafficFilter": {
+                        "type": "object",
+                        "properties": {
+                          "destMacAddr": {
+                            "type": "string"
+                          },
+                          "ethType": {
+                            "type": "string"
+                          },
+                          "fDesc": {
+                            "type": "string"
+                          },
+                          "fDir": {
+                            "type": "string"
+                          },
+                          "sourceMacAddr": {
+                            "type": "string"
+                          },
+                          "vlanTags": {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          },
+                          "srcMacAddrEnd": {
+                            "type": "string"
+                          },
+                          "destMacAddrEnd": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "destMacAddr",
+                          "ethType",
+                          "fDesc",
+                          "fDir",
+                          "sourceMacAddr",
+                          "vlanTags",
+                          "srcMacAddrEnd",
+                          "destMacAddrEnd"
+                        ]
+                      },
+                      "exceps": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "object",
+                            "properties": {
+                              "excepId": {
+                                "type": "string"
+                              },
+                              "excepLevel": {
+                                "type": "integer"
+                              },
+                              "excepTrend": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "excepId",
+                              "excepLevel",
+                              "excepTrend"
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "ipTrafficFilter",
+                      "ethTrafficFilter",
+                      "exceps"
+                    ]
+                  }
+                ]
+              },
+              "congestionInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "appId": {
+                        "type": "string"
+                      },
+                      "ipTrafficFilter": {
+                        "type": "object",
+                        "properties": {
+                          "flowId": {
+                            "type": "integer"
+                          },
+                          "flowDescriptions": {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "flowId",
+                          "flowDescriptions"
+                        ]
+                      },
+                      "timeInterv": {
+                        "type": "object",
+                        "properties": {
+                          "startTime": {
+                            "type": "string"
+                          },
+                          "stopTime": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "startTime",
+                          "stopTime"
+                        ]
+                      },
+                      "thrputUl": {
+                        "type": "string"
+                      },
+                      "thrputDl": {
+                        "type": "string"
+                      },
+                      "thrputPkUl": {
+                        "type": "string"
+                      },
+                      "thrputPkDl": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "appId",
+                      "ipTrafficFilter",
+                      "timeInterv",
+                      "thrputUl",
+                      "thrputDl",
+                      "thrputPkUl",
+                      "thrputPkDl"
+                    ]
+                  }
+                ]
+              },
+              "perfDataInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "appId": {
+                        "type": "string"
+                      },
+                      "ueIpAddr": {
+                        "type": "object",
+                        "properties": {
+                          "ipv4Addr": {
+                            "type": "string"
+                          },
+                          "ipv6Addr": {
+                            "type": "string"
+                          },
+                          "ipv6Prefix": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "ipv4Addr",
+                          "ipv6Addr",
+                          "ipv6Prefix"
+                        ]
+                      },
+                      "ipTrafficFilter": {
+                        "type": "object",
+                        "properties": {
+                          "flowId": {
+                            "type": "integer"
+                          },
+                          "flowDescriptions": {
+                            "type": "array",
+                            "items": [
+                              {
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "flowId",
+                          "flowDescriptions"
+                        ]
+                      },
+                      "userLoc": {
+                        "type": "object",
+                        "properties": {
+                          "eutraLocation": {
+                            "type": "object",
+                            "properties": {
+                              "tai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "tac": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "tac",
+                                  "nid"
+                                ]
+                              },
+                              "ignoreTai": {
+                                "type": "boolean"
+                              },
+                              "ecgi": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "eutraCellId": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "eutraCellId",
+                                  "nid"
+                                ]
+                              },
+                              "ignoreEcgi": {
+                                "type": "boolean"
+                              },
+                              "ageOfLocationInformation": {
+                                "type": "integer"
+                              },
+                              "ueLocationTimestamp": {
+                                "type": "string"
+                              },
+                              "geographicalInformation": {
+                                "type": "string"
+                              },
+                              "geodeticInformation": {
+                                "type": "string"
+                              },
+                              "globalNgenbId": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "n3IwfId": {
+                                    "type": "string"
+                                  },
+                                  "gNbId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "bitLength": {
+                                        "type": "integer"
+                                      },
+                                      "gNBValue": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "bitLength",
+                                      "gNBValue"
+                                    ]
+                                  },
+                                  "ngeNbId": {
+                                    "type": "string"
+                                  },
+                                  "wagfId": {
+                                    "type": "string"
+                                  },
+                                  "tngfId": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  },
+                                  "eNbId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "n3IwfId",
+                                  "gNbId",
+                                  "ngeNbId",
+                                  "wagfId",
+                                  "tngfId",
+                                  "nid",
+                                  "eNbId"
+                                ]
+                              },
+                              "globalENbId": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "n3IwfId": {
+                                    "type": "string"
+                                  },
+                                  "gNbId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "bitLength": {
+                                        "type": "integer"
+                                      },
+                                      "gNBValue": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "bitLength",
+                                      "gNBValue"
+                                    ]
+                                  },
+                                  "ngeNbId": {
+                                    "type": "string"
+                                  },
+                                  "wagfId": {
+                                    "type": "string"
+                                  },
+                                  "tngfId": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  },
+                                  "eNbId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "n3IwfId",
+                                  "gNbId",
+                                  "ngeNbId",
+                                  "wagfId",
+                                  "tngfId",
+                                  "nid",
+                                  "eNbId"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "tai",
+                              "ignoreTai",
+                              "ecgi",
+                              "ignoreEcgi",
+                              "ageOfLocationInformation",
+                              "ueLocationTimestamp",
+                              "geographicalInformation",
+                              "geodeticInformation",
+                              "globalNgenbId",
+                              "globalENbId"
+                            ]
+                          },
+                          "nrLocation": {
+                            "type": "object",
+                            "properties": {
+                              "tai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "tac": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "tac",
+                                  "nid"
+                                ]
+                              },
+                              "ncgi": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "nrCellId": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "nrCellId",
+                                  "nid"
+                                ]
+                              },
+                              "ageOfLocationInformation": {
+                                "type": "integer"
+                              },
+                              "ueLocationTimestamp": {
+                                "type": "string"
+                              },
+                              "geographicalInformation": {
+                                "type": "string"
+                              },
+                              "geodeticInformation": {
+                                "type": "string"
+                              },
+                              "globalGnbId": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "n3IwfId": {
+                                    "type": "string"
+                                  },
+                                  "gNbId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "bitLength": {
+                                        "type": "integer"
+                                      },
+                                      "gNBValue": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "bitLength",
+                                      "gNBValue"
+                                    ]
+                                  },
+                                  "ngeNbId": {
+                                    "type": "string"
+                                  },
+                                  "wagfId": {
+                                    "type": "string"
+                                  },
+                                  "tngfId": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  },
+                                  "eNbId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "n3IwfId",
+                                  "gNbId",
+                                  "ngeNbId",
+                                  "wagfId",
+                                  "tngfId",
+                                  "nid",
+                                  "eNbId"
+                                ]
+                              }
+                            },
+                            "required": [
+                              "tai",
+                              "ncgi",
+                              "ageOfLocationInformation",
+                              "ueLocationTimestamp",
+                              "geographicalInformation",
+                              "geodeticInformation",
+                              "globalGnbId"
+                            ]
+                          },
+                          "n3gaLocation": {
+                            "type": "object",
+                            "properties": {
+                              "n3gppTai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "tac": {
+                                    "type": "string"
+                                  },
+                                  "nid": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "tac",
+                                  "nid"
+                                ]
+                              },
+                              "n3IwfId": {
+                                "type": "string"
+                              },
+                              "ueIpv4Addr": {
+                                "type": "string"
+                              },
+                              "ueIpv6Addr": {
+                                "type": "string"
+                              },
+                              "portNumber": {
+                                "type": "integer"
+                              },
+                              "protocol": {
+                                "type": "string"
+                              },
+                              "tnapId": {
+                                "type": "object",
+                                "properties": {
+                                  "ssId": {
+                                    "type": "string"
+                                  },
+                                  "bssId": {
+                                    "type": "string"
+                                  },
+                                  "civicAddress": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "ssId",
+                                  "bssId",
+                                  "civicAddress"
+                                ]
+                              },
+                              "twapId": {
+                                "type": "object",
+                                "properties": {
+                                  "ssId": {
+                                    "type": "string"
+                                  },
+                                  "bssId": {
+                                    "type": "string"
+                                  },
+                                  "civicAddress": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "ssId",
+                                  "bssId",
+                                  "civicAddress"
+                                ]
+                              },
+                              "hfcNodeId": {
+                                "type": "object",
+                                "properties": {
+                                  "hfcNId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "hfcNId"
+                                ]
+                              },
+                              "gli": {
+                                "type": "string"
+                              },
+                              "w5gbanLineType": {
+                                "type": "string"
+                              },
+                              "gci": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "n3gppTai",
+                              "n3IwfId",
+                              "ueIpv4Addr",
+                              "ueIpv6Addr",
+                              "portNumber",
+                              "protocol",
+                              "tnapId",
+                              "twapId",
+                              "hfcNodeId",
+                              "gli",
+                              "w5gbanLineType",
+                              "gci"
+                            ]
+                          },
+                          "utraLocation": {
+                            "type": "object",
+                            "properties": {
+                              "cgi": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "cellId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "cellId"
+                                ]
+                              },
+                              "sai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "sac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "sac"
+                                ]
+                              },
+                              "lai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac"
+                                ]
+                              },
+                              "rai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "rac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "rac"
+                                ]
+                              },
+                              "ageOfLocationInformation": {
+                                "type": "integer"
+                              },
+                              "ueLocationTimestamp": {
+                                "type": "string"
+                              },
+                              "geographicalInformation": {
+                                "type": "string"
+                              },
+                              "geodeticInformation": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "cgi",
+                              "sai",
+                              "lai",
+                              "rai",
+                              "ageOfLocationInformation",
+                              "ueLocationTimestamp",
+                              "geographicalInformation",
+                              "geodeticInformation"
+                            ]
+                          },
+                          "geraLocation": {
+                            "type": "object",
+                            "properties": {
+                              "locationNumber": {
+                                "type": "string"
+                              },
+                              "cgi": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "cellId": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "cellId"
+                                ]
+                              },
+                              "rai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "rac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "rac"
+                                ]
+                              },
+                              "sai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  },
+                                  "sac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac",
+                                  "sac"
+                                ]
+                              },
+                              "lai": {
+                                "type": "object",
+                                "properties": {
+                                  "plmnId": {
+                                    "type": "object",
+                                    "properties": {
+                                      "mcc": {
+                                        "type": "string"
+                                      },
+                                      "mnc": {
+                                        "type": "string"
+                                      }
+                                    },
+                                    "required": [
+                                      "mcc",
+                                      "mnc"
+                                    ]
+                                  },
+                                  "lac": {
+                                    "type": "string"
+                                  }
+                                },
+                                "required": [
+                                  "plmnId",
+                                  "lac"
+                                ]
+                              },
+                              "vlrNumber": {
+                                "type": "string"
+                              },
+                              "mscNumber": {
+                                "type": "string"
+                              },
+                              "ageOfLocationInformation": {
+                                "type": "integer"
+                              },
+                              "ueLocationTimestamp": {
+                                "type": "string"
+                              },
+                              "geographicalInformation": {
+                                "type": "string"
+                              },
+                              "geodeticInformation": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "locationNumber",
+                              "cgi",
+                              "rai",
+                              "sai",
+                              "lai",
+                              "vlrNumber",
+                              "mscNumber",
+                              "ageOfLocationInformation",
+                              "ueLocationTimestamp",
+                              "geographicalInformation",
+                              "geodeticInformation"
+                            ]
+                          }
+                        },
+                        "required": [
+                          "eutraLocation",
+                          "nrLocation",
+                          "n3gaLocation",
+                          "utraLocation",
+                          "geraLocation"
+                        ]
+                      },
+                      "appLocs": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      },
+                      "asAddr": {
+                        "type": "object",
+                        "properties": {
+                          "ipAddr": {
+                            "type": "object",
+                            "properties": {
+                              "ipv4Addr": {
+                                "type": "string"
+                              },
+                              "ipv6Addr": {
+                                "type": "string"
+                              },
+                              "ipv6Prefix": {
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "ipv4Addr",
+                              "ipv6Addr",
+                              "ipv6Prefix"
+                            ]
+                          },
+                          "fqdn": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "ipAddr",
+                          "fqdn"
+                        ]
+                      },
+                      "perfData": {
+                        "type": "object",
+                        "properties": {
+                          "pdb": {
+                            "type": "integer"
+                          },
+                          "plr": {
+                            "type": "integer"
+                          },
+                          "thrputUl": {
+                            "type": "string"
+                          },
+                          "thrputDl": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "pdb",
+                          "plr",
+                          "thrputUl",
+                          "thrputDl"
+                        ]
+                      },
+                      "timeStamp": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "appId",
+                      "ueIpAddr",
+                      "ipTrafficFilter",
+                      "userLoc",
+                      "appLocs",
+                      "asAddr",
+                      "perfData",
+                      "timeStamp"
+                    ]
+                  }
+                ]
+              },
+              "dispersionInfos": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "gpsi": {
+                        "type": "string"
+                      },
+                      "ueAddr": {
+                        "type": "object",
+                        "properties": {
+                          "ipv4Addr": {
+                            "type": "string"
+                          },
+                          "ipv6Addr": {
+                            "type": "string"
+                          },
+                          "ipv6Prefix": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "ipv4Addr",
+                          "ipv6Addr",
+                          "ipv6Prefix"
+                        ]
+                      },
+                      "dataUsage": {
+                        "type": "object",
+                        "properties": {
+                          "duration": {
+                            "type": "integer"
+                          },
+                          "totalVolume": {
+                            "type": "integer"
+                          },
+                          "downlinkVolume": {
+                            "type": "integer"
+                          },
+                          "uplinkVolume": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "duration",
+                          "totalVolume",
+                          "downlinkVolume",
+                          "uplinkVolume"
+                        ]
+                      },
+                      "flowDesp": {
+                        "type": "string"
+                      },
+                      "appId": {
+                        "type": "string"
+                      },
+                      "dnais": {
+                        "type": "array",
+                        "items": [
+                          {
+                            "type": "string"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "gpsi",
+                      "ueAddr",
+                      "dataUsage",
+                      "flowDesp",
+                      "appId",
+                      "dnais"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "event",
+              "timeStamp",
+              "svcExprcInfos",
+              "ueMobilityInfos",
+              "ueCommInfos",
+              "excepInfos",
+              "congestionInfos",
+              "perfDataInfos",
+              "dispersionInfos"
+            ]
+          }
+        ]
+      },
+      "suppFeat": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "eventsSubs",
+      "eventsRepInfo",
+      "notifUri",
+      "notifId",
+      "eventNotifs",
+      "suppFeat"
+    ]
+  }

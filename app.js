@@ -5,6 +5,7 @@ const path = require('path');
 const logger = require('morgan');
 
 let trafficInfluence = require('./service/TrafficInfluence');
+let eventExposure = require('./service/EventExposure');
 
 let app = express();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/3gpp-traffic-Influence/v1', trafficInfluence);
+app.use('/nnef-eventexposure/v1', eventExposure);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
