@@ -1,0 +1,329 @@
+{
+  "type": "object",
+  "properties": {
+    "afServiceId": {
+      "type": "string"
+    },
+    "afAppId": {
+      "type": "string"
+    },
+    "afTransId": {
+      "type": "string"
+    },
+    "appReloInd": {
+      "type": "boolean"
+    },
+    "dnn": {
+      "type": "string"
+    },
+    "snssai": {
+      "type": "object",
+      "properties": {
+        "sst": {
+          "type": "integer"
+        },
+        "sd": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "sst",
+        "sd"
+      ]
+    },
+    "externalGroupId": {
+      "type": "string"
+    },
+    "anyUeInd": {
+      "type": "boolean"
+    },
+    "subscribedEvents": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "gpsi": {
+      "type": "string"
+    },
+    "ipv4Addr": {
+      "type": "string"
+    },
+    "ipDomain": {
+      "type": "string"
+    },
+    "ipv6Addr": {
+      "type": "string"
+    },
+    "macAddr": {
+      "type": "string"
+    },
+    "dnaiChgType": {
+      "type": "string"
+    },
+    "notificationDestination": {
+      "type": "string"
+    },
+    "requestTestNotification": {
+      "type": "boolean"
+    },
+    "websockNotifConfig": {
+      "type": "object",
+      "properties": {
+        "websocketUri": {
+          "type": "string"
+        },
+        "requestWebsocketUri": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "websocketUri",
+        "requestWebsocketUri"
+      ]
+    },
+    "self": {
+      "type": "string"
+    },
+    "trafficFilters": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "flowId": {
+              "type": "integer"
+            },
+            "flowDescriptions": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "flowId",
+            "flowDescriptions"
+          ]
+        }
+      ]
+    },
+    "ethTrafficFilters": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "destMacAddr": {
+              "type": "string"
+            },
+            "ethType": {
+              "type": "string"
+            },
+            "fDesc": {
+              "type": "string"
+            },
+            "fDir": {
+              "type": "string"
+            },
+            "sourceMacAddr": {
+              "type": "string"
+            },
+            "vlanTags": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "srcMacAddrEnd": {
+              "type": "string"
+            },
+            "destMacAddrEnd": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "destMacAddr",
+            "ethType",
+            "fDesc",
+            "fDir",
+            "sourceMacAddr",
+            "vlanTags",
+            "srcMacAddrEnd",
+            "destMacAddrEnd"
+          ]
+        }
+      ]
+    },
+    "trafficRoutes": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "dnai": {
+              "type": "string"
+            },
+            "routeInfo": {
+              "type": "object",
+              "properties": {
+                "ipv4Addr": {
+                  "type": "string"
+                },
+                "ipv6Addr": {
+                  "type": "string"
+                },
+                "portNumber": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "ipv4Addr",
+                "ipv6Addr",
+                "portNumber"
+              ]
+            },
+            "routeProfId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dnai",
+            "routeInfo",
+            "routeProfId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dnai": {
+              "type": "string"
+            },
+            "routeInfo": {
+              "type": "object",
+              "properties": {
+                "ipv4Addr": {
+                  "type": "string"
+                },
+                "ipv6Addr": {
+                  "type": "string"
+                },
+                "portNumber": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "ipv4Addr",
+                "ipv6Addr",
+                "portNumber"
+              ]
+            },
+            "routeProfId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "dnai",
+            "routeInfo",
+            "routeProfId"
+          ]
+        }
+      ]
+    },
+    "tfcCorrInd": {
+      "type": "boolean"
+    },
+    "tempValidities": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "startTime": {
+              "type": "string"
+            },
+            "stopTime": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "startTime",
+            "stopTime"
+          ]
+        }
+      ]
+    },
+    "validGeoZoneIds": {
+      "type": "array",
+      "items": [
+        {
+          "type": "string"
+        }
+      ]
+    },
+    "afAckInd": {
+      "type": "boolean"
+    },
+    "addrPreserInd": {
+      "type": "boolean"
+    },
+    "upLatReq": {
+      "type": "object",
+      "properties": {
+        "maxAllowedUpLat": {
+          "type": "integer"
+        },
+        "upLatPrefer": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "maxAllowedUpLat",
+        "upLatPrefer"
+      ]
+    },
+    "suppFeat": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "afServiceId",
+    "afAppId",
+    "afTransId",
+    "appReloInd",
+    "dnn",
+    "snssai",
+    "externalGroupId",
+    "anyUeInd",
+    "subscribedEvents",
+    "gpsi",
+    "ipv4Addr",
+    "ipDomain",
+    "ipv6Addr",
+    "macAddr",
+    "dnaiChgType",
+    "notificationDestination",
+    "requestTestNotification",
+    "websockNotifConfig",
+    "self",
+    "trafficFilters",
+    "ethTrafficFilters",
+    "trafficRoutes",
+    "tfcCorrInd",
+    "tempValidities",
+    "validGeoZoneIds",
+    "afAckInd",
+    "addrPreserInd",
+    "upLatReq",
+    "suppFeat"
+  ]
+}
