@@ -97,7 +97,8 @@ router.post('/:afId/subscriptions', (req, res, next) => {
                 length = subscriptions[req.params.afId].push(req.body) - 1;
             }
             res.statusCode = 201;
-            res.setHeader('Location', `/${req.params.afId}/subscription/${length}`)
+            // header에 location으로 uri를 전달하여 af가 subscription의 위치를 알 수 있도록 함
+            res.setHeader('Location', `/${req.params.afId}/subscriptions/${length}`)
             res.json(subscriptions[req.params.afId][length]);
         } catch (error) {
             let problemDetailsSub = problemDetails;
