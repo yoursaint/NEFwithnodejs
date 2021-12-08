@@ -21,7 +21,7 @@ const problemDetails = {
     "supportedFeatures": "string"
 };
 
-let subscriptions = [];
+let subscriptions = [[], ];
 
 /**
  * Traffic Influence Subscription
@@ -38,11 +38,9 @@ let subscriptions = [];
  */
 
 router.get('/:afId/subscriptions', (req, res, next) => {
-    try {
-        let subscription = subscriptions[req.params.afId];
+    let subscription = subscriptions[req.params.afId];
 
-        res.json(subscription);
-    } catch (error) {
+    if (typeof subscription == 'undefined') {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -53,6 +51,8 @@ router.get('/:afId/subscriptions', (req, res, next) => {
         res.setHeader('Content-type', 'application/problem+json');
         res.statusCode = 404;
         res.json(problemDetailsSub);
+    } else {
+        res.json(subscription);
     }
 });
 
@@ -86,8 +86,16 @@ router.post('/:afId/subscriptions', (req, res, next) => {
         res.json(problemDetailsSub);
     } else {
         try {
-            subscriptions[req.params.afId] = req.body;
-            res.json(subscriptions[req.params.afId]);
+            let length = 0;
+
+            if (typeof subscriptions[req.params.afId] == 'undefined') {
+                subscriptions[req.params.afId] = [req.body];
+            } else {
+                length = subscriptions[req.params.afId].push(req.body) - 1;
+            }
+            res.statusCode = 201;
+            res.setHeader('Location', `/${req.params.afId}/subscription/${length}`)
+            res.json(subscriptions[req.params.afId][length]);
         } catch (error) {
             let problemDetailsSub = problemDetails;
 
