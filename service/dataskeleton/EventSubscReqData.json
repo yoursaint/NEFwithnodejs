@@ -1,0 +1,35 @@
+{
+    "events": [
+      {
+        "event": "ACCESS_TYPE_CHANGE",
+        "notifMethod": "EVENT_DETECTION",
+        "repPeriod": 0,
+        "waitTime": 0
+      }
+    ],
+    "notifUri": "string",
+    "reqQosMonParams": [
+      "DOWNLINK",
+      "string"
+    ],
+    "qosMon": {
+      "repThreshDl": 0,
+      "repThreshUl": 0,
+      "repThreshRp": 0
+    },
+    "reqAnis": [
+      "USER_LOCATION",
+      "string"
+    ],
+    "usgThres": {
+      "duration": 0,
+      "totalVolume": 0,
+      "downlinkVolume": 0,
+      "uplinkVolume": 0
+    },
+    "notifCorreId": "string",
+    "afAppIds": [
+      "string"
+    ],
+    "directNotifInd": true
+  }
