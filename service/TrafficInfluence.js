@@ -147,7 +147,7 @@ router.get('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
 });
 
 /**
- * put request에 따라 subscription 정보를 수정
+ * put과 patch request에 따라 subscription 정보를 수정
  * -구현
  * input json의 스키마 검사 (by ajv)
  * nef 메모리의 subscription 수정
@@ -237,8 +237,33 @@ router.patch('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
     }
 });
 
+/**
+ * delete request에 따라 subscription 정보를 삭제
+ * -구현
+ * nef 메모리의 subscription 삭제
+ * -미구현
+ * 5G core와의 상호 작용
+ * -에러처리
+ * Internal Server Error(204): 메모리의 subscription이 삭제되어 'no content' 상태
+ */
+
 router.delete('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
-    res.json({ afId: req.params.afId, subscriptionId: req.params.subscriptionId });
+    try {
+        subscriptions[req.params.afId].splice(req.params.subscriptionId, 1);
+        res.statusCode = 204;
+        res.json({});
+    } catch(error) {
+        let problemDetailsSub = problemDetails;
+
+        problemDetailsSub.type = "Internal Server Error";
+        problemDetailsSub.title = "Internal Server Error";
+        problemDetailsSub.status = 500;
+        problemDetailsSub.detail = error;
+
+        res.setHeader('Content-type', 'application/problem+json');
+        res.statusCode = 500;
+        res.json(problemDetailsSub);
+    }
 });
 
 module.exports = router;
