@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string"
+      },
+      "supportedFeatures": {
+        "type": "string"
+      },
+      "mtcProviderId": {
+        "type": "string"
+      },
+      "externalId": {
+        "type": "string"
+      },
+      "msisdn": {
+        "type": "string"
+      },
+      "externalGroupId": {
+        "type": "string"
+      },
+      "cpParameterSets": {
+        "type": "object"
+      }
+    },
+    "required": [
+      "self",
+      "supportedFeatures",
+      "mtcProviderId",
+      "externalId",
+      "msisdn",
+      "externalGroupId",
+      "cpParameterSets"
+    ]
+  }

@@ -143,6 +143,7 @@ router.get('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
         res.statusCode = 404;
         res.json(problemDetailsSub);
     } else {
+        res.statusCode = 200;
         res.json(subscription);
     }
 });
