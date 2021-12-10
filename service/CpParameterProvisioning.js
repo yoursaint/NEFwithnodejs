@@ -122,7 +122,7 @@ router.post('/:afId/subscriptions', (req, res, next) => {
  * PUT : 
  *  input json의 스키마 검사 (by ajv),
  *  nef의 메모리에 새로운 subscription을 저장하여 수정
- * DELETE : 대상 subscirption 삭제
+ * DELETE : 대상 subscription 삭제
  * -미구현
  * 5G core와의 상호 작용
  * -에러처리

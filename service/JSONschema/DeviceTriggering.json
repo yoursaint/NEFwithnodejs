@@ -1,0 +1,67 @@
+{
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string"
+      },
+      "externalId": {
+        "type": "string"
+      },
+      "msisdn": {
+        "type": "string"
+      },
+      "supportedFeatures": {
+        "type": "string"
+      },
+      "validityPeriod": {
+        "type": "integer"
+      },
+      "priority": {
+        "type": "string"
+      },
+      "applicationPortId": {
+        "type": "integer"
+      },
+      "appSrcPortId": {
+        "type": "integer"
+      },
+      "triggerPayload": {
+        "type": "string"
+      },
+      "notificationDestination": {
+        "type": "string"
+      },
+      "requestTestNotification": {
+        "type": "boolean"
+      },
+      "websockNotifConfig": {
+        "type": "object",
+        "properties": {
+          "websocketUri": {
+            "type": "string"
+          },
+          "requestWebsocketUri": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "websocketUri",
+          "requestWebsocketUri"
+        ]
+      }
+    },
+    "required": [
+      "self",
+      "externalId",
+      "msisdn",
+      "supportedFeatures",
+      "validityPeriod",
+      "priority",
+      "applicationPortId",
+      "appSrcPortId",
+      "triggerPayload",
+      "notificationDestination",
+      "requestTestNotification",
+      "websockNotifConfig"
+    ]
+  }
