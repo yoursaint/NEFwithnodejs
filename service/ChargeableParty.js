@@ -4,7 +4,10 @@ const Ajv = require('ajv');
 const router = express.Router();
 const ajv = new Ajv();
 
-const deviceTriggering = require('./JSONschema/DeviceTriggering.json');
+const ChargeableParty = require('./JSONschema/ChargeableParty.json');
+const ChargeablePartyPatch = require('./JSONschema/ChargeablePartyPatch.json');
+
+router.use(express.json({type : 'application/merge-patch+json'}));
 
 const problemDetails = {
     "type": "string",
@@ -25,7 +28,7 @@ const problemDetails = {
 let transactions = [[],];
 
 /**
- * af의 device triggering 저장 및 조회
+ * af의 chargeable party 저장 및 조회
  * METHOD : GET, POST
  * uri : /{afId}/transactions
  * - 구현
@@ -63,7 +66,7 @@ let transactions = [[],];
 });
 
 router.post('/:afId/transactions', (req, res, next) => {
-    let isValid = ajv.validate(deviceTriggering, req.body);
+    let isValid = ajv.validate(ChargeableParty, req.body);
 
     if (!isValid) {
         let errorMessages = ajv.errorsText();
@@ -108,13 +111,13 @@ router.post('/:afId/transactions', (req, res, next) => {
 
 /**
  * af의 transaction document 수정, 삭제 및 조회
- * METHOD : GET, PUT, DELETE
+ * METHOD : GET, PATCH, DELETE
  * uri : /{afId}/transaction/{transactionId}
  * - 구현
  * GET : 해당 transactionId를 가지는 transaction 조회
- * PUT : 
+ * PATCH : 
  *  input json의 스키마 검사 (by ajv),
- *  nef의 메모리에 새로운 transaction을 저장하여 수정
+ *  transaction 수정
  * DELETE : 대상 transaction 삭제
  * -미구현
  * 5G core와의 상호 작용
@@ -144,8 +147,8 @@ router.post('/:afId/transactions', (req, res, next) => {
     }
 });
 
-router.put('/:afId/transactions/:transactionId', (req, res, next) => {
-    let isValid = ajv.validate(deviceTriggering, req.body);
+router.patch('/:afId/transactions/:transactionId', (req, res, next) => {
+    let isValid = ajv.validate(ChargeablePartyPatch, req.body);
 
     if (!isValid) {
         let errorMessages = ajv.errorsText();
@@ -162,7 +165,12 @@ router.put('/:afId/transactions/:transactionId', (req, res, next) => {
         res.json(problemDetailsSub);
     } else {
         try {
-            transactions[req.params.afId][req.params.transactionId] = req.body;
+            let keys = Object.keys(req.body);
+            
+            for (let i = 0; i < keys.length; i++){
+                transactions[req.params.afId][req.params.transactionId][keys[i]] = req.body[keys[i]];
+            }
+
             res.statusCode = 200;
             res.json(transactions[req.params.afId][req.params.transactionId]);
         } catch (error) {

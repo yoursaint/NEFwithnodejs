@@ -1,0 +1,219 @@
+{
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string"
+      },
+      "supportedFeatures": {
+        "type": "string"
+      },
+      "dnn": {
+        "type": "string"
+      },
+      "snssai": {
+        "type": "object",
+        "properties": {
+          "sst": {
+            "type": "integer"
+          },
+          "sd": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sst",
+          "sd"
+        ]
+      },
+      "notificationDestination": {
+        "type": "string"
+      },
+      "requestTestNotification": {
+        "type": "boolean"
+      },
+      "websockNotifConfig": {
+        "type": "object",
+        "properties": {
+          "websocketUri": {
+            "type": "string"
+          },
+          "requestWebsocketUri": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "websocketUri",
+          "requestWebsocketUri"
+        ]
+      },
+      "exterAppId": {
+        "type": "string"
+      },
+      "ipv4Addr": {
+        "type": "string"
+      },
+      "ipDomain": {
+        "type": "string"
+      },
+      "ipv6Addr": {
+        "type": "string"
+      },
+      "macAddr": {
+        "type": "string"
+      },
+      "flowInfo": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "flowId": {
+                "type": "integer"
+              },
+              "flowDescriptions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "flowId",
+              "flowDescriptions"
+            ]
+          }
+        ]
+      },
+      "ethFlowInfo": {
+        "type": "array",
+        "items": [
+          {
+            "type": "object",
+            "properties": {
+              "destMacAddr": {
+                "type": "string"
+              },
+              "ethType": {
+                "type": "string"
+              },
+              "fDesc": {
+                "type": "string"
+              },
+              "fDir": {
+                "type": "string"
+              },
+              "sourceMacAddr": {
+                "type": "string"
+              },
+              "vlanTags": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "srcMacAddrEnd": {
+                "type": "string"
+              },
+              "destMacAddrEnd": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "destMacAddr",
+              "ethType",
+              "fDesc",
+              "fDir",
+              "sourceMacAddr",
+              "vlanTags",
+              "srcMacAddrEnd",
+              "destMacAddrEnd"
+            ]
+          }
+        ]
+      },
+      "sponsorInformation": {
+        "type": "object",
+        "properties": {
+          "sponsorId": {
+            "type": "string"
+          },
+          "aspId": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sponsorId",
+          "aspId"
+        ]
+      },
+      "sponsoringEnabled": {
+        "type": "boolean"
+      },
+      "referenceId": {
+        "type": "string"
+      },
+      "servAuthInfo": {
+        "type": "string"
+      },
+      "usageThreshold": {
+        "type": "object",
+        "properties": {
+          "duration": {
+            "type": "integer"
+          },
+          "totalVolume": {
+            "type": "integer"
+          },
+          "downlinkVolume": {
+            "type": "integer"
+          },
+          "uplinkVolume": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "duration",
+          "totalVolume",
+          "downlinkVolume",
+          "uplinkVolume"
+        ]
+      },
+      "events": {
+        "type": "array",
+        "items": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "self",
+      "supportedFeatures",
+      "dnn",
+      "snssai",
+      "notificationDestination",
+      "requestTestNotification",
+      "websockNotifConfig",
+      "exterAppId",
+      "ipv4Addr",
+      "ipDomain",
+      "ipv6Addr",
+      "macAddr",
+      "flowInfo",
+      "ethFlowInfo",
+      "sponsorInformation",
+      "sponsoringEnabled",
+      "referenceId",
+      "servAuthInfo",
+      "usageThreshold",
+      "events"
+    ]
+  }

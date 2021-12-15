@@ -1,0 +1,123 @@
+{
+    "type": "object",
+    "properties": {
+        "flowInfo": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "flowId": {
+                            "type": "integer"
+                        },
+                        "flowDescriptions": {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        }
+                    },
+                    "required": [
+                        "flowId",
+                        "flowDescriptions"
+                    ]
+                }
+            ]
+        },
+        "exterAppId": {
+            "type": "string"
+        },
+        "ethFlowInfo": {
+            "type": "array",
+            "items": [
+                {
+                    "type": "object",
+                    "properties": {
+                        "destMacAddr": {
+                            "type": "string"
+                        },
+                        "ethType": {
+                            "type": "string"
+                        },
+                        "fDesc": {
+                            "type": "string"
+                        },
+                        "fDir": {
+                            "type": "string"
+                        },
+                        "sourceMacAddr": {
+                            "type": "string"
+                        },
+                        "vlanTags": {
+                            "type": "array",
+                            "items": [
+                                {
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "srcMacAddrEnd": {
+                            "type": "string"
+                        },
+                        "destMacAddrEnd": {
+                            "type": "string"
+                        }
+                    },
+                    "required": [
+                        "destMacAddr",
+                        "ethType",
+                        "fDesc",
+                        "fDir",
+                        "sourceMacAddr",
+                        "vlanTags",
+                        "srcMacAddrEnd",
+                        "destMacAddrEnd"
+                    ]
+                }
+            ]
+        },
+        "sponsoringEnabled": {
+            "type": "boolean"
+        },
+        "referenceId": {
+            "type": "string"
+        },
+        "usageThreshold": {
+            "type": "object",
+            "properties": {
+                "duration": {
+                    "type": "integer"
+                },
+                "totalVolume": {
+                    "type": "integer"
+                },
+                "downlinkVolume": {
+                    "type": "integer"
+                },
+                "uplinkVolume": {
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "duration",
+                "totalVolume",
+                "downlinkVolume",
+                "uplinkVolume"
+            ]
+        },
+        "notificationDestination": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "flowInfo",
+        "exterAppId",
+        "ethFlowInfo",
+        "sponsoringEnabled",
+        "referenceId",
+        "usageThreshold",
+        "notificationDestination"
+    ]
+}

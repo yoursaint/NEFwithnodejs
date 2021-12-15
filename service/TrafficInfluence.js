@@ -216,7 +216,6 @@ router.patch('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
     } else {
         try {
             let keys = Object.keys(req.body);
-
             
             for (let i = 0; i < keys.length; i++){
                 subscriptions[req.params.afId][req.params.subscriptionId][keys[i]] = req.body[keys[i]];
