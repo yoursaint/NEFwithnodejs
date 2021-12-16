@@ -9,6 +9,7 @@ let eventExposure = require('./service/EventExposure');
 let cpParameterProvisioning = require('./service/CpParameterProvisioning');
 let deviceTriggering = require('./service/DeviceTriggering');
 let chargeableParty = require('./service/ChargeableParty');
+let bdtpNegotiation = require('./service/BDTPNegotiation');
 
 let app = express();
 
@@ -21,6 +22,7 @@ app.use('/nnef-eventexposure/v1', eventExposure);
 app.use('/3gpp-cp-parameter-provisioning/v1', cpParameterProvisioning);
 app.use('/3gpp-device-triggering/v1', deviceTriggering);
 app.use('/3gpp-chargeable-party/v1', chargeableParty);
+app.use('/3gpp-bdt/v1', bdtpNegotiation);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
