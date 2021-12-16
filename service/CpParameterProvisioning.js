@@ -116,7 +116,7 @@ router.post('/:afId/subscriptions', (req, res, next) => {
 /**
  * af의 subscription document 수정, 삭제 및 조회
  * METHOD : GET, PUT, DELETE
- * uri : /{afId}/subscription/{subscriptionId}
+ * uri : /{afId}/subscriptions/{subscriptionId}
  * - 구현
  * GET : 해당 subscriptionId를 가지는 subscription 조회
  * PUT : 
@@ -209,7 +209,7 @@ router.delete('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
 /**
  * subscription document의 cpSets 수정, 삭제 및 조회
  * METHOD : GET, PUT, DELETE
- * uri : /{afId}/subscription/{subscriptionId}/cpSets/{setId}
+ * uri : /{afId}/subscriptions/{subscriptionId}/cpSets/{setId}
  * - 구현
  * GET : 해당 setId를 가지는 cpSets 조회
  * PUT :
@@ -342,8 +342,6 @@ function findSetIdKey(obj, setId) {
     let key = null;
 
     for (let prop in obj) {
-        console.log(prop + ' ' + obj[prop]);
-        
         if (obj[prop]['setId'] == setId) key = prop;
     }
 

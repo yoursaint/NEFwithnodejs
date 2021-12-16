@@ -10,6 +10,7 @@ let cpParameterProvisioning = require('./service/CpParameterProvisioning');
 let deviceTriggering = require('./service/DeviceTriggering');
 let chargeableParty = require('./service/ChargeableParty');
 let bdtpNegotiation = require('./service/BDTPNegotiation');
+let pfdManagement = require('./service/PFDManagement');
 
 let app = express();
 
@@ -23,6 +24,7 @@ app.use('/3gpp-cp-parameter-provisioning/v1', cpParameterProvisioning);
 app.use('/3gpp-device-triggering/v1', deviceTriggering);
 app.use('/3gpp-chargeable-party/v1', chargeableParty);
 app.use('/3gpp-bdt/v1', bdtpNegotiation);
+app.use('/3gpp-pfd-management/v1', pfdManagement);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

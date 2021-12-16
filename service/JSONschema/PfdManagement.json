@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string"
+      },
+      "supportedFeatures": {
+        "type": "string"
+      },
+      "pfdDatas": {
+        "type": "object"
+      },
+      "notificationDestination": {
+        "type": "string"
+      },
+      "requestTestNotification": {
+        "type": "boolean"
+      },
+      "websockNotifConfig": {
+        "type": "object",
+        "properties": {
+          "websocketUri": {
+            "type": "string"
+          },
+          "requestWebsocketUri": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "websocketUri",
+          "requestWebsocketUri"
+        ]
+      }
+    },
+    "required": [
+      "self",
+      "supportedFeatures",
+      "pfdDatas",
+      "notificationDestination",
+      "requestTestNotification",
+      "websockNotifConfig"
+    ]
+  }

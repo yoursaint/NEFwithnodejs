@@ -1,0 +1,158 @@
+{
+    "type": "object",
+    "properties": {
+      "externalAppId": {
+        "type": "string"
+      },
+      "self": {
+        "type": "string"
+      },
+      "pfds": {
+        "type": "object",
+        "properties": {
+          "additionalProp1": {
+            "type": "object",
+            "properties": {
+              "pfdId": {
+                "type": "string"
+              },
+              "flowDescriptions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "urls": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "domainNames": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "dnProtocol": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pfdId",
+              "flowDescriptions",
+              "urls",
+              "domainNames",
+              "dnProtocol"
+            ]
+          },
+          "additionalProp2": {
+            "type": "object",
+            "properties": {
+              "pfdId": {
+                "type": "string"
+              },
+              "flowDescriptions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "urls": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "domainNames": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "dnProtocol": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pfdId",
+              "flowDescriptions",
+              "urls",
+              "domainNames",
+              "dnProtocol"
+            ]
+          },
+          "additionalProp3": {
+            "type": "object",
+            "properties": {
+              "pfdId": {
+                "type": "string"
+              },
+              "flowDescriptions": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "urls": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "domainNames": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "dnProtocol": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "pfdId",
+              "flowDescriptions",
+              "urls",
+              "domainNames",
+              "dnProtocol"
+            ]
+          }
+        },
+        "required": [
+          "additionalProp1",
+          "additionalProp2",
+          "additionalProp3"
+        ]
+      },
+      "allowedDelay": {
+        "type": "integer"
+      },
+      "cachingTime": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "externalAppId",
+      "self",
+      "pfds"
+    ]
+  }
