@@ -42,7 +42,7 @@ let subscriptions = [[],];
 router.get('/:afId/subscriptions', (req, res, next) => {
     let subscription = subscriptions[req.params.afId];
 
-    if (typeof subscription == 'undefined') {
+    if (subscription == undefined) {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -131,7 +131,7 @@ router.post('/:afId/subscriptions', (req, res, next) => {
 router.get('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
     let subscription = subscriptions[req.params.afId][req.params.subscriptionId];
 
-    if (typeof subscription == 'undefined') {
+    if (subscription == undefined) {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -250,7 +250,7 @@ router.patch('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
 
 router.delete('/:afId/subscriptions/:subscriptionId', (req, res, next) => {
     try {
-        subscriptions[req.params.afId].splice(req.params.subscriptionId, 1);
+        subscriptions[req.params.afId].splice(req.params.subscriptionId, 1, undefined);
         res.statusCode = 204;
         res.json({});
     } catch(error) {

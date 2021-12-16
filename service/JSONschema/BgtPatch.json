@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "properties": {
+      "selectedPolicy": {
+        "type": "integer"
+      },
+      "warnNotifEnabled": {
+        "type": "boolean"
+      },
+      "notificationDestination": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "selectedPolicy",
+      "warnNotifEnabled",
+      "notificationDestination"
+    ]
+  }

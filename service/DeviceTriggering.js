@@ -45,7 +45,7 @@ let transactions = [[],];
  router.get('/:afId/transactions', (req, res, next) => {
     let transaction = transactions[req.params.afId];
 
-    if (typeof transaction == 'undefined') {
+    if (transaction == undefined) {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -128,7 +128,7 @@ router.post('/:afId/transactions', (req, res, next) => {
  router.get('/:afId/transactions/:transactionId', (req, res, next) => {
     let transaction = transactions[req.params.afId][req.params.transactionId];
 
-    if (typeof transaction == 'undefined') {
+    if (transaction == undefined) {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -182,7 +182,7 @@ router.put('/:afId/transactions/:transactionId', (req, res, next) => {
 
 router.delete('/:afId/transactions/:transactionId', (req, res, next) => {
     try {
-        transactions[req.params.afId].splice(req.params.transactionId, 1);
+        transactions[req.params.afId].splice(req.params.transactionId, 1, undefined);
         res.statusCode = 204;
         res.json({});
     } catch (error) {

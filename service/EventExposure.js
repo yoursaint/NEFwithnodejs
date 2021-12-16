@@ -104,7 +104,7 @@ router.post('/subscriptions', (req, res, next) => {
 router.get('/subscriptions/:subscriptionId', (req, res, next) => {
     let subscription = subscriptions[req.params.subscriptionId];
 
-    if (typeof subscription == 'undefined') {
+    if (subscription == undefined) {
         let problemDetailsSub = problemDetails;
 
         problemDetailsSub.type = "Not Found";
@@ -159,7 +159,7 @@ router.put('/subscriptions/:subscriptionId', (req, res, next) => {
 
 router.delete('/subscriptions/:subscriptionId', (req, res, next) => {
     try {
-        subscriptions.splice(req.params.subscriptionId, 1);
+        subscriptions.splice(req.params.subscriptionId, 1, undefined);
         res.statusCode = 204;
         res.json({});
     } catch (error) {

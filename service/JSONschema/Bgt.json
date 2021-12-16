@@ -1,0 +1,1564 @@
+{
+    "type": "object",
+    "properties": {
+      "self": {
+        "type": "string"
+      },
+      "supportedFeatures": {
+        "type": "string"
+      },
+      "volumePerUE": {
+        "type": "object",
+        "properties": {
+          "duration": {
+            "type": "integer"
+          },
+          "totalVolume": {
+            "type": "integer"
+          },
+          "downlinkVolume": {
+            "type": "integer"
+          },
+          "uplinkVolume": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "duration",
+          "totalVolume",
+          "downlinkVolume",
+          "uplinkVolume"
+        ]
+      },
+      "numberOfUEs": {
+        "type": "integer"
+      },
+      "desiredTimeWindow": {
+        "type": "object",
+        "properties": {
+          "startTime": {
+            "type": "string"
+          },
+          "stopTime": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "startTime",
+          "stopTime"
+        ]
+      },
+      "locationArea": {
+        "type": "object",
+        "properties": {
+          "cellIds": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "enodeBIds": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "routingAreaIds": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "trackingAreaIds": {
+            "type": "array",
+            "items": [
+              {
+                "type": "string"
+              }
+            ]
+          },
+          "geographicAreas": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "uncertainty": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "uncertainty"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "uncertaintyEllipse": {
+                    "type": "object",
+                    "properties": {
+                      "semiMajor": {
+                        "type": "integer"
+                      },
+                      "semiMinor": {
+                        "type": "integer"
+                      },
+                      "orientationMajor": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "semiMajor",
+                      "semiMinor",
+                      "orientationMajor"
+                    ]
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "uncertaintyEllipse",
+                  "confidence"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "pointList": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "shape",
+                  "pointList"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "altitude": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "altitude"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "altitude": {
+                    "type": "integer"
+                  },
+                  "uncertaintyEllipse": {
+                    "type": "object",
+                    "properties": {
+                      "semiMajor": {
+                        "type": "integer"
+                      },
+                      "semiMinor": {
+                        "type": "integer"
+                      },
+                      "orientationMajor": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "semiMajor",
+                      "semiMinor",
+                      "orientationMajor"
+                    ]
+                  },
+                  "uncertaintyAltitude": {
+                    "type": "integer"
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "altitude",
+                  "uncertaintyEllipse",
+                  "uncertaintyAltitude",
+                  "confidence"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "innerRadius": {
+                    "type": "integer"
+                  },
+                  "uncertaintyRadius": {
+                    "type": "integer"
+                  },
+                  "offsetAngle": {
+                    "type": "integer"
+                  },
+                  "includedAngle": {
+                    "type": "integer"
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "innerRadius",
+                  "uncertaintyRadius",
+                  "offsetAngle",
+                  "includedAngle",
+                  "confidence"
+                ]
+              }
+            ]
+          },
+          "civicAddresses": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string"
+                  },
+                  "A1": {
+                    "type": "string"
+                  },
+                  "A2": {
+                    "type": "string"
+                  },
+                  "A3": {
+                    "type": "string"
+                  },
+                  "A4": {
+                    "type": "string"
+                  },
+                  "A5": {
+                    "type": "string"
+                  },
+                  "A6": {
+                    "type": "string"
+                  },
+                  "PRD": {
+                    "type": "string"
+                  },
+                  "POD": {
+                    "type": "string"
+                  },
+                  "STS": {
+                    "type": "string"
+                  },
+                  "HNO": {
+                    "type": "string"
+                  },
+                  "HNS": {
+                    "type": "string"
+                  },
+                  "LMK": {
+                    "type": "string"
+                  },
+                  "LOC": {
+                    "type": "string"
+                  },
+                  "NAM": {
+                    "type": "string"
+                  },
+                  "PC": {
+                    "type": "string"
+                  },
+                  "BLD": {
+                    "type": "string"
+                  },
+                  "UNIT": {
+                    "type": "string"
+                  },
+                  "FLR": {
+                    "type": "string"
+                  },
+                  "ROOM": {
+                    "type": "string"
+                  },
+                  "PLC": {
+                    "type": "string"
+                  },
+                  "PCN": {
+                    "type": "string"
+                  },
+                  "POBOX": {
+                    "type": "string"
+                  },
+                  "ADDCODE": {
+                    "type": "string"
+                  },
+                  "SEAT": {
+                    "type": "string"
+                  },
+                  "RD": {
+                    "type": "string"
+                  },
+                  "RDSEC": {
+                    "type": "string"
+                  },
+                  "RDBR": {
+                    "type": "string"
+                  },
+                  "RDSUBBR": {
+                    "type": "string"
+                  },
+                  "PRM": {
+                    "type": "string"
+                  },
+                  "POM": {
+                    "type": "string"
+                  },
+                  "usageRules": {
+                    "type": "string"
+                  },
+                  "method": {
+                    "type": "string"
+                  },
+                  "providedBy": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "country",
+                  "A1",
+                  "A2",
+                  "A3",
+                  "A4",
+                  "A5",
+                  "A6",
+                  "PRD",
+                  "POD",
+                  "STS",
+                  "HNO",
+                  "HNS",
+                  "LMK",
+                  "LOC",
+                  "NAM",
+                  "PC",
+                  "BLD",
+                  "UNIT",
+                  "FLR",
+                  "ROOM",
+                  "PLC",
+                  "PCN",
+                  "POBOX",
+                  "ADDCODE",
+                  "SEAT",
+                  "RD",
+                  "RDSEC",
+                  "RDBR",
+                  "RDSUBBR",
+                  "PRM",
+                  "POM",
+                  "usageRules",
+                  "method",
+                  "providedBy"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "cellIds",
+          "enodeBIds",
+          "routingAreaIds",
+          "trackingAreaIds",
+          "geographicAreas",
+          "civicAddresses"
+        ]
+      },
+      "locationArea5G": {
+        "type": "object",
+        "properties": {
+          "geographicAreas": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "uncertainty": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "uncertainty"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "uncertaintyEllipse": {
+                    "type": "object",
+                    "properties": {
+                      "semiMajor": {
+                        "type": "integer"
+                      },
+                      "semiMinor": {
+                        "type": "integer"
+                      },
+                      "orientationMajor": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "semiMajor",
+                      "semiMinor",
+                      "orientationMajor"
+                    ]
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "uncertaintyEllipse",
+                  "confidence"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "pointList": {
+                    "type": "array",
+                    "items": [
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      },
+                      {
+                        "type": "object",
+                        "properties": {
+                          "lon": {
+                            "type": "integer"
+                          },
+                          "lat": {
+                            "type": "integer"
+                          }
+                        },
+                        "required": [
+                          "lon",
+                          "lat"
+                        ]
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "shape",
+                  "pointList"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "altitude": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "altitude"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "altitude": {
+                    "type": "integer"
+                  },
+                  "uncertaintyEllipse": {
+                    "type": "object",
+                    "properties": {
+                      "semiMajor": {
+                        "type": "integer"
+                      },
+                      "semiMinor": {
+                        "type": "integer"
+                      },
+                      "orientationMajor": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "semiMajor",
+                      "semiMinor",
+                      "orientationMajor"
+                    ]
+                  },
+                  "uncertaintyAltitude": {
+                    "type": "integer"
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "altitude",
+                  "uncertaintyEllipse",
+                  "uncertaintyAltitude",
+                  "confidence"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "shape": {
+                    "type": "string"
+                  },
+                  "point": {
+                    "type": "object",
+                    "properties": {
+                      "lon": {
+                        "type": "integer"
+                      },
+                      "lat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "lon",
+                      "lat"
+                    ]
+                  },
+                  "innerRadius": {
+                    "type": "integer"
+                  },
+                  "uncertaintyRadius": {
+                    "type": "integer"
+                  },
+                  "offsetAngle": {
+                    "type": "integer"
+                  },
+                  "includedAngle": {
+                    "type": "integer"
+                  },
+                  "confidence": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "shape",
+                  "point",
+                  "innerRadius",
+                  "uncertaintyRadius",
+                  "offsetAngle",
+                  "includedAngle",
+                  "confidence"
+                ]
+              }
+            ]
+          },
+          "civicAddresses": {
+            "type": "array",
+            "items": [
+              {
+                "type": "object",
+                "properties": {
+                  "country": {
+                    "type": "string"
+                  },
+                  "A1": {
+                    "type": "string"
+                  },
+                  "A2": {
+                    "type": "string"
+                  },
+                  "A3": {
+                    "type": "string"
+                  },
+                  "A4": {
+                    "type": "string"
+                  },
+                  "A5": {
+                    "type": "string"
+                  },
+                  "A6": {
+                    "type": "string"
+                  },
+                  "PRD": {
+                    "type": "string"
+                  },
+                  "POD": {
+                    "type": "string"
+                  },
+                  "STS": {
+                    "type": "string"
+                  },
+                  "HNO": {
+                    "type": "string"
+                  },
+                  "HNS": {
+                    "type": "string"
+                  },
+                  "LMK": {
+                    "type": "string"
+                  },
+                  "LOC": {
+                    "type": "string"
+                  },
+                  "NAM": {
+                    "type": "string"
+                  },
+                  "PC": {
+                    "type": "string"
+                  },
+                  "BLD": {
+                    "type": "string"
+                  },
+                  "UNIT": {
+                    "type": "string"
+                  },
+                  "FLR": {
+                    "type": "string"
+                  },
+                  "ROOM": {
+                    "type": "string"
+                  },
+                  "PLC": {
+                    "type": "string"
+                  },
+                  "PCN": {
+                    "type": "string"
+                  },
+                  "POBOX": {
+                    "type": "string"
+                  },
+                  "ADDCODE": {
+                    "type": "string"
+                  },
+                  "SEAT": {
+                    "type": "string"
+                  },
+                  "RD": {
+                    "type": "string"
+                  },
+                  "RDSEC": {
+                    "type": "string"
+                  },
+                  "RDBR": {
+                    "type": "string"
+                  },
+                  "RDSUBBR": {
+                    "type": "string"
+                  },
+                  "PRM": {
+                    "type": "string"
+                  },
+                  "POM": {
+                    "type": "string"
+                  },
+                  "usageRules": {
+                    "type": "string"
+                  },
+                  "method": {
+                    "type": "string"
+                  },
+                  "providedBy": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "country",
+                  "A1",
+                  "A2",
+                  "A3",
+                  "A4",
+                  "A5",
+                  "A6",
+                  "PRD",
+                  "POD",
+                  "STS",
+                  "HNO",
+                  "HNS",
+                  "LMK",
+                  "LOC",
+                  "NAM",
+                  "PC",
+                  "BLD",
+                  "UNIT",
+                  "FLR",
+                  "ROOM",
+                  "PLC",
+                  "PCN",
+                  "POBOX",
+                  "ADDCODE",
+                  "SEAT",
+                  "RD",
+                  "RDSEC",
+                  "RDBR",
+                  "RDSUBBR",
+                  "PRM",
+                  "POM",
+                  "usageRules",
+                  "method",
+                  "providedBy"
+                ]
+              }
+            ]
+          },
+          "nwAreaInfo": {
+            "type": "object",
+            "properties": {
+              "ecgis": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "eutraCellId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "eutraCellId",
+                      "nid"
+                    ]
+                  }
+                ]
+              },
+              "ncgis": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "nrCellId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "nrCellId",
+                      "nid"
+                    ]
+                  }
+                ]
+              },
+              "gRanNodeIds": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  },
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "n3IwfId": {
+                        "type": "string"
+                      },
+                      "gNbId": {
+                        "type": "object",
+                        "properties": {
+                          "bitLength": {
+                            "type": "integer"
+                          },
+                          "gNBValue": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "bitLength",
+                          "gNBValue"
+                        ]
+                      },
+                      "ngeNbId": {
+                        "type": "string"
+                      },
+                      "wagfId": {
+                        "type": "string"
+                      },
+                      "tngfId": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      },
+                      "eNbId": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "n3IwfId",
+                      "gNbId",
+                      "ngeNbId",
+                      "wagfId",
+                      "tngfId",
+                      "nid",
+                      "eNbId"
+                    ]
+                  }
+                ]
+              },
+              "tais": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "object",
+                    "properties": {
+                      "plmnId": {
+                        "type": "object",
+                        "properties": {
+                          "mcc": {
+                            "type": "string"
+                          },
+                          "mnc": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "mcc",
+                          "mnc"
+                        ]
+                      },
+                      "tac": {
+                        "type": "string"
+                      },
+                      "nid": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "plmnId",
+                      "tac",
+                      "nid"
+                    ]
+                  }
+                ]
+              }
+            },
+            "required": [
+              "ecgis",
+              "ncgis",
+              "gRanNodeIds",
+              "tais"
+            ]
+          }
+        },
+        "required": [
+          "geographicAreas",
+          "civicAddresses",
+          "nwAreaInfo"
+        ]
+      },
+      "referenceId": {
+        "type": "string"
+      },
+      "selectedPolicy": {
+        "type": "integer"
+      },
+      "externalGroupId": {
+        "type": "string"
+      },
+      "notificationDestination": {
+        "type": "string"
+      },
+      "warnNotifEnabled": {
+        "type": "boolean"
+      },
+      "trafficDes": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "self",
+      "supportedFeatures",
+      "volumePerUE",
+      "numberOfUEs",
+      "desiredTimeWindow",
+      "locationArea",
+      "locationArea5G",
+      "referenceId",
+      "selectedPolicy",
+      "externalGroupId",
+      "notificationDestination",
+      "warnNotifEnabled",
+      "trafficDes"
+    ]
+  }
