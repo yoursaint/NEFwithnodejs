@@ -1,33 +1,6 @@
 {
     "type": "object",
     "properties": {
-      "self": {
-        "type": "string"
-      },
-      "supportedFeatures": {
-        "type": "string"
-      },
-      "dnn": {
-        "type": "string"
-      },
-      "snssai": {
-        "type": "object",
-        "properties": {
-          "sst": {
-            "type": "integer"
-          },
-          "sd": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "sst",
-          "sd"
-        ]
-      },
-      "notificationDestination": {
-        "type": "string"
-      },
       "exterAppId": {
         "type": "string"
       },
@@ -119,18 +92,6 @@
       "disUeNotif": {
         "type": "boolean"
       },
-      "ueIpv4Addr": {
-        "type": "string"
-      },
-      "ipDomain": {
-        "type": "string"
-      },
-      "ueIpv6Addr": {
-        "type": "string"
-      },
-      "macAddr": {
-        "type": "string"
-      },
       "usageThreshold": {
         "type": "object",
         "properties": {
@@ -152,21 +113,6 @@
           "totalVolume",
           "downlinkVolume",
           "uplinkVolume"
-        ]
-      },
-      "sponsorInfo": {
-        "type": "object",
-        "properties": {
-          "sponsorId": {
-            "type": "string"
-          },
-          "aspId": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "sponsorId",
-          "aspId"
         ]
       },
       "qosMonInfo": {
@@ -222,6 +168,9 @@
       },
       "localNotifInd": {
         "type": "boolean"
+      },
+      "notificationDestination": {
+        "type": "string"
       },
       "tscQosReq": {
         "type": "object",
@@ -309,48 +258,19 @@
           "tscaiInputDl",
           "tscaiInputUl"
         ]
-      },
-      "requestTestNotification": {
-        "type": "boolean"
-      },
-      "websockNotifConfig": {
-        "type": "object",
-        "properties": {
-          "websocketUri": {
-            "type": "string"
-          },
-          "requestWebsocketUri": {
-            "type": "boolean"
-          }
-        },
-        "required": [
-          "websocketUri",
-          "requestWebsocketUri"
-        ]
       }
     },
     "required": [
-      "self",
-      "supportedFeatures",
-      "dnn",
-      "snssai",
-      "notificationDestination",
       "exterAppId",
       "flowInfo",
       "ethFlowInfo",
       "qosReference",
       "altQoSReferences",
       "disUeNotif",
-      "ueIpv4Addr",
-      "ipDomain",
-      "ueIpv6Addr",
-      "macAddr",
       "usageThreshold",
-      "sponsorInfo",
       "qosMonInfo",
       "localNotifInd",
-      "tscQosReq",
-      "requestTestNotification",
-      "websockNotifConfig"
+      "notificationDestination",
+      "tscQosReq"
     ]
   }
